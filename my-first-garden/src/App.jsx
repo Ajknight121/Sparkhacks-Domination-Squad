@@ -9,26 +9,28 @@ import PlantOption from "./components/PlantOption";
 import SpaceIntroduction from "./components/SpaceIntro";
 import {NorthernIllinoisplants , CentralIllinoisplants, SouthernIllinoisplants } from "./plantData.js";
 
-let currzone = NorthernIllinoisplants
 
-function chooseZone(loc_choice) {
-  if (loc_choice == 0){
-    currzone = NorthernIllinoisplants;
-  }
-  else if (loc_choice == 1){
-    currzone = CentralIllinoisplants;
-    }
-  else if (loc_choice == 2){
-    currzone = SouthernIllinoisplants;
-    }
-}
+
 
 function App() {
   // const [rain, setRain] = useState(true);
   // const [selected, setSelected] = useState(false);
   const [selectedOption, setSelectedOption] = useState(0);
+  const [username, setUsername] = useState("user")
   const [step, setStep] = useState(0)
+  const [currzone, setZone] = useState(NorthernIllinoisplants)
   
+  function chooseZone(loc_choice) {
+    if (loc_choice == 0){
+      setZone(NorthernIllinoisplants);
+    }
+    else if (loc_choice == 1){
+      setZone(CentralIllinoisplants);
+      }
+    else if (loc_choice == 2){
+      setZone(SouthernIllinoisplants);
+      }
+  }
   const nextStep = () => {
     setStep(prevStep => prevStep + 1);
   };
@@ -41,10 +43,11 @@ function App() {
     setSelectedOption(index);
   };
 
+
   return (
     <>
       {step < 6 ? (
-        <SpaceIntroduction prev={prevStep} next={nextStep}/>
+        <SpaceIntroduction username={username} setUsername={setUsername} step={step} prev={prevStep} next={nextStep} currZone={currzone} setZone={setZone}/>
       ) : (
         <div className="dashboard w-full h-screen bg-amber-700">
           <div className="relative w-full h-20">
