@@ -1,0 +1,50 @@
+{"Crops": {
+    "Potato": {
+        "name": "Potato",
+        "sun req": "Full sun",
+        "water req inch": 1,
+        "watering cycle days": 7,
+        "square ft req per plant": 1,
+        "soil pH": 5.0
+    },
+    "Asparagus": {
+        "name": "Asparagus",
+        "sun req": "Full sun",
+        "water req inch": 1.5,
+        "watering cycle days": 7,
+        "square ft req per plant": 2,
+        "soil pH": 7.0
+    },
+    "Radish": {
+        "name": "Radish",
+        "sun req": "Full sun",
+        "water req inch": 1,
+        "watering cycle days": 7,
+        "square ft req per plant": 0.2,
+        "soil pH": 6.5
+    },
+    "Onion": {
+        "name": "Onion",
+        "sun req": "Full sun",
+        "water req inch": 1,
+        "watering cycle days": 7,
+        "square ft req per plant": 0.2,
+        "soil pH": 7.0
+    },
+    "Cucumber": {
+        "name": "Cucumber",
+        "sun req": "Partial shade",
+        "water req inch": 1,
+        "watering cycle days": 7,
+        "square ft req per plant": 1,
+        "soil pH": 6.0
+    },
+    "Sweet corn": {
+        "name": "Sweet corn",
+        "sun req": "Full sun",
+        "water req inch": 1,
+        "watering cycle days": 7,
+        "square ft req per plant": 2,
+        "soil pH": 6.5
+    }
+}}    
