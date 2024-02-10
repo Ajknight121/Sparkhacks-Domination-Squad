@@ -1,3 +1,6 @@
+/*contains different plant and there information from the 3 main different region of Illinois to provide 
+tips for growing any one of 3 plants*/
+
 export const NorthernIllinoisplants = [
     {
         plantName: "Beets",
