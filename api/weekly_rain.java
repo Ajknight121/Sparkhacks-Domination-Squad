@@ -5,9 +5,9 @@ import java.net.URL;
 
 
 public class weekly_rain {
-    public static void main(String[] args, String yesterday_time, String today_time, double lattitude, double longitude,) {
+    public static void main(String[] args, String yesterday_time, String today_time, double lattitude, double longitude) {
         try {
-            private String rain_url = (
+            String rain_url = (
                 "https://api.meteomatics.com/" +
                 yesterday_time +
                 today_time +
@@ -15,11 +15,11 @@ public class weekly_rain {
                 Double.toString(lattitude) +
                 "," +
                 Double.toString(longitude) +
-                "/json?api_key=" +
-                Rain_key.
-                )
+                "/json?api_key=" + 
+                "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2IjoxLCJ1c2VyIjoidWljX3N0dWNrZXlfc2FtIiwiaXNzIjoibG9naW4ubWV0ZW9tYXRpY3MuY29tIiwiZXhwIjoxNzA3NTkwMjIxLCJzdWIiOiJhY2Nlc3MifQ.ELJpMbywkKnLl87AOhg12wrFAj63TFXfOg4ih54s2pB4Fw10WcKaUNuqT8X92OWf2u5KNItOmHw6sWgURYCi7A"
+                ); // This is temporaty, need to get it from Rin_key
 
-            URL url = new URL(rain_url)
+            URL url = new URL(rain_url);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Accept", "application/json");

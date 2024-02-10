@@ -5,18 +5,18 @@ import java.net.URL;
 
 
 public class climate_weather {
-    public static void main(String[] args, double lattitude, double longitude) {
+    public static void main(String[] args) {
         try {
-            private String climate_url = (
+            String climate_url = (
                 "http://climateapi.scottpinkelman.com/api/v1/location/" +
-                "[" + lattitude + "]" +
+                "[" + args[0] + "]" +
                 "/" +
-                "[" + longitude + "]"
+                "[" + args[1] + "]"
                 //"/json?api_key=" dont think we need this either
                 //climate_key() we will see about this one
-                )
+                );
 
-            URL url = new URL(climate_url)
+            URL url = new URL(climate_url);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Accept", "application/json");
