@@ -8,9 +8,32 @@ import "./App.css";
 import PlantOption from "./components/PlantOption";
 import SpaceIntroduction from "./components/SpaceIntro";
 import {NorthernIllinoisplants , CentralIllinoisplants, SouthernIllinoisplants } from "./plantData.js";
+//import weatherSouthBase from "./components/testWeatherSouth.JSON";
+//import weatherMiddleBase from "./components/testWeatherMiddle.JSON";
+//import weatherNorthBase from "./components/testWeatherNorth.JSON";
 
+let southWeather = [false, true, true, true, false, true, false];
+let middleWeather = [true, false, false, false, true, false, true];
+let northWeather = [false, false, false, true, false, false, false];
+let curWeather = middleWeather;
+let currzone = CentralIllinoisplants
 
+function chooseZone(loc_choice) {
+  if (loc_choice == 0){
+    currzone = NorthernIllinoisplants;
+    curWeather = json.parse(weatherNorthBase);
+  }
+  else if (loc_choice == 1){
+    currzone = CentralIllinoisplants;
+    curWeather = json.parse(weatherMiddleBase);
+    }
+  else if (loc_choice == 2){
+    currzone = SouthernIllinoisplants;
+    curWeather = json.parse(weatherSouthBase);
+    }
+}
 
+let user_name = "Adrian";
 
 function App() {
   // const [rain, setRain] = useState(true);
@@ -58,19 +81,23 @@ function App() {
             <div className="text-white text-3xl absolute top-4 left-5">
               <h1>My garden dashboard</h1>
             </div>
+            <div className = "text-white text-3xl absolute top-4 right-5">
+              <h1>{user_name}</h1>
+              </div>
           </div>
+          
           <div className="weather bg-cyan-300 p-5">
             <h2 className="bg-[#d3fff4] text-2xl font-bold p-10">
               This week&apos;s watering forecast
             </h2>
             <div className="grid grid-flow-row grid-cols-7">
-              <WeatherDay day="Saturday" rain={false} />
-              <WeatherDay day="Sunday" rain={true} />
-              <WeatherDay day="Monday" rain={true} />
-              <WeatherDay day="Tuesday" rain={false} />
-              <WeatherDay day="Wednesday" rain={true} />
-              <WeatherDay day="Thursday" rain={false} />
-              <WeatherDay day="Friday" rain={false} />
+              <WeatherDay day="Saturday" rain={curWeather[0]} />
+              <WeatherDay day="Sunday" rain={curWeather[1]} />
+              <WeatherDay day="Monday" rain={curWeather[2]} />
+              <WeatherDay day="Tuesday" rain={curWeather[3]} />
+              <WeatherDay day="Wednesday" rain={curWeather[4]} />
+              <WeatherDay day="Thursday" rain={curWeather[5]} />
+              <WeatherDay day="Friday" rain={curWeather[6]} />
             </div>
           </div>
           <div className="my-plants h-fit bg-amber-500 h-2/3 relative">
@@ -102,7 +129,7 @@ function App() {
                 </div>
                 <div className="plant-detail p-8 bg-yellow-400 grid grid-flow-row grid-cols-3">
                   <div className="general p-7 m-2 bg-cyan-200">
-                    <h2 className="p-2 text-xl">🎓General Info</h2>
+                    <h2 className="p-2 text-xl">🎓Time and Zone Info</h2>
                     <hr />
                     <div className="general-content text-lg">
                     {currzone[selectedOption].info[0]}
@@ -116,7 +143,7 @@ function App() {
                     </div>
                   </div>
                   <div className="general p-7 m-2 bg-red-200">
-                    <h2 className="p-2 text-xl">🐛Pest Info</h2>
+                    <h2 className="p-2 text-xl">🐛Problem/Pest Info</h2>
                     <hr />
                     <div className="pest-content text-lg">
                       {currzone[selectedOption].info[2]}
