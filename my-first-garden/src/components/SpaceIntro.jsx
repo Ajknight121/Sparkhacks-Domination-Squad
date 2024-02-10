@@ -65,7 +65,7 @@ export default function SpaceIntroduction({
                 name="direction"
                 value="north"
                 checked={currZone == NorthernIllinoisplants}
-                onChange={() => handleLocation(NorthernIllinoisplants)}
+                onChange={() => handleLocation(0)}
               />
               My garden is in Northern Illinois
             </label>
@@ -76,7 +76,7 @@ export default function SpaceIntroduction({
                 name="direction"
                 value="south"
                 checked={currZone == SouthernIllinoisplants}
-                onChange={() => handleLocation(SouthernIllinoisplants)}
+                onChange={() => handleLocation(2)}
               />
               My garden is in Southern Illinois
             </label>
@@ -87,7 +87,7 @@ export default function SpaceIntroduction({
                 name="direction"
                 value="center"
                 checked={currZone == CentralIllinoisplants}
-                onChange={() => handleLocation(CentralIllinoisplants)}
+                onChange={() => handleLocation(1)}
               />
               My garden is in Central Illinois
             </label>
