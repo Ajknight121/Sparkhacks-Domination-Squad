@@ -5,7 +5,7 @@ import java.net.URL;
 
 
 public class climate_weather {
-    public static void main(String[] args) {
+    public static void main(String[] args, double lattitude, double longitude) {
         try {
             private String climate_url = (
                 "http://climateapi.scottpinkelman.com/api/v1/location/" +

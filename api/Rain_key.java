@@ -19,7 +19,7 @@ public class Rain_key {
         connection.setRequestMethod("GET");
         connection.setRequestProperty("Authorization", authHeaderValue);
 
-        int responseCode = connection.getResponseCode();
+        String responseCode = connection.getResponseCode();
         BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
         String inputLine;
         StringBuilder content = new StringBuilder();
