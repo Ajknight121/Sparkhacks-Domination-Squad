@@ -6,6 +6,8 @@ import cornerVine from "./images/vines-corner.png";
 import WeatherDay from "./components/weatherDay";
 import "./App.css";
 import PlantOption from "./components/PlantOption";
+import {NorthernIllinoisplants , CentralIllinoisplants, SouthernIllinoisplants } from "./plantData.js";
+
 
 const plants = [
   {
