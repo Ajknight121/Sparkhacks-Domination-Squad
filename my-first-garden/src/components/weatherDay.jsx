@@ -5,7 +5,7 @@ import wateringCanImg from "../images/clip-art-watering-can.png";
 export default function WeatherDay({day,rain}) {
   return (
     <div className="weather-day">
-      <div className="text-center text-xl text-white">{day}</div>
+      <div className="text-center font-semibold text-xl text-white">{day}</div>
       <div className="bg-cyan-400">
       <img src={rain ? rainImg : wateringCanImg} width={"280px"} height={"280px"} />
 
