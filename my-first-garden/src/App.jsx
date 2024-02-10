@@ -8,18 +8,28 @@ import "./App.css";
 import PlantOption from "./components/PlantOption";
 import SpaceIntroduction from "./components/SpaceIntro";
 import {NorthernIllinoisplants , CentralIllinoisplants, SouthernIllinoisplants } from "./plantData.js";
+//import weatherSouthBase from "./components/testWeatherSouth.JSON";
+//import weatherMiddleBase from "./components/testWeatherMiddle.JSON";
+//import weatherNorthBase from "./components/testWeatherNorth.JSON";
 
+let southWeather = [false, true, false, true, false, true, false];
+let middleWeather = [true, false, true, false, true, false, true];
+let northWeather = [false, false, false, false, false, false, false];
+let curWeather = northWeather;
 let currzone = NorthernIllinoisplants
 
 function chooseZone(loc_choice) {
   if (loc_choice == 0){
     currzone = NorthernIllinoisplants;
+    curWeather = json.parse(weatherNorthBase);
   }
   else if (loc_choice == 1){
     currzone = CentralIllinoisplants;
+    curWeather = json.parse(weatherMiddleBase);
     }
   else if (loc_choice == 2){
     currzone = SouthernIllinoisplants;
+    curWeather = json.parse(weatherSouthBase);
     }
 }
 
@@ -61,13 +71,13 @@ function App() {
               This week&apos;s watering forecast
             </h2>
             <div className="grid grid-flow-row grid-cols-7">
-              <WeatherDay day="Saturday" rain={regionWeather.list[0].weather.main == "deeznut" ? true : false} />
-              <WeatherDay day="Sunday" rain={true} />
-              <WeatherDay day="Monday" rain={true} />
-              <WeatherDay day="Tuesday" rain={false} />
-              <WeatherDay day="Wednesday" rain={true} />
-              <WeatherDay day="Thursday" rain={false} />
-              <WeatherDay day="Friday" rain={false} />
+              <WeatherDay day="Saturday" rain={curWeather[0]} />
+              <WeatherDay day="Sunday" rain={curWeather[1]} />
+              <WeatherDay day="Monday" rain={curWeather[2]} />
+              <WeatherDay day="Tuesday" rain={curWeather[3]} />
+              <WeatherDay day="Wednesday" rain={curWeather[4]} />
+              <WeatherDay day="Thursday" rain={curWeather[5]} />
+              <WeatherDay day="Friday" rain={curWeather[6]} />
             </div>
           </div>
           <div className="my-plants bg-amber-500 h-2/3 relative">
