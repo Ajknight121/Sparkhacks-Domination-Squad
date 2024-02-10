@@ -1,9 +1,18 @@
 {"Crops": {
-    "Example": {
-        "name": "Really Nice CArrot",
-        "sun req": 10.0,
-        "water req": 10.0,
-        "land req": 12,
-        "soil pH": 0.4
+    "Potato": {
+        "name": "Potato",
+        "sun req": "Full sun",
+        "water req inch": 1,
+        "watering cycle days": 7,
+        "square ft req per plant": 1,
+        "soil pH": 5.0
+    },
+    "Asparagus": {
+        "name": "Asparagus",
+        "sun req": "Full sun",
+        "water req inch": 1.5,
+        "watering cycle days": 7,
+        "square ft req per plant": 2,
+        "soil pH": 7.0
     }
 }}    
