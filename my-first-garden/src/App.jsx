@@ -80,7 +80,7 @@ function App() {
               <WeatherDay day="Friday" rain={curWeather[6]} />
             </div>
           </div>
-          <div className="my-plants bg-amber-500 h-2/3 relative">
+          <div className="my-plants h-fit bg-amber-500 h-2/3 relative">
             <img
               src={cornerVine}
               className="absolute bottom-0 left-[-27px] overflow-hidden pointer-events-none"
@@ -112,24 +112,21 @@ function App() {
                     <h2 className="p-2 text-xl">🎓General Info</h2>
                     <hr />
                     <div className="general-content text-lg">
-                      {currzone[selectedOption].info.map((text, index) => (
-                        <li key={index}>{text}</li>
-                      ))}
-                      This plant needs XX liters amount of water
+                    {currzone[selectedOption].info[0]}
                     </div>
                   </div>
                   <div className="general p-7 m-2 bg-green-200">
                     <h2 className="p-2 text-xl">🌱Planting Info</h2>
                     <hr />
                     <div className="planting-content text-lg">
-                      To plant dig a X in hole
+                      {currzone[selectedOption].info[1]}
                     </div>
                   </div>
                   <div className="general p-7 m-2 bg-red-200">
                     <h2 className="p-2 text-xl">🐛Pest Info</h2>
                     <hr />
                     <div className="pest-content text-lg">
-                      Be aware of rodents
+                      {currzone[selectedOption].info[2]}
                     </div>
                   </div>
                 </div>
