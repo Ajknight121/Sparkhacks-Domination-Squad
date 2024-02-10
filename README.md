@@ -17,7 +17,7 @@ The site can be accesed here: https://main--myfirstsparkhacksgarden.netlify.app/
 # Inspiration {#inspire}
 The John Deere track at SparkHacks tasked us with, "proposing a technological solution aimed at a sustainable innovation and enviromentally friendly practices."
 
-Both the prompt and the sponsor inspired us to develop a tool which would encourage 
+Both the prompt and the sponsor inspired us to develop a tool which would encourage residents of urban areas to take sustainability into their own hands by effectively lowering the barrier of entry of gardening by providing information that would be useful to first time planters through a website.
 
 # Future Plans {#plans}
 We plan to expand the app with usage of 3rd-party APIs on the back-end and expansion of UI/UX.
