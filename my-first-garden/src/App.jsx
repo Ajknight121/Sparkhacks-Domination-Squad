@@ -24,12 +24,12 @@ function App() {
         <img src={spaceBackground} className="background-img absolute top-0 left-0 w-full h-full object-cover"/>
       </div> */}
       <div className="dashboard w-full h-screen bg-amber-700">
-        <div className="relative w-full h-14">
+        <div className="relative w-full h-20">
           <img
             src={spaceBackground}
             className="background-img top-0 left-0 w-full h-full object-cover"
           />
-          <div className="text-white text-3xl absolute top-1">
+          <div className="text-white text-3xl absolute top-4 left-5">
             <h1>My garden dashboard</h1>
           </div>
         </div>
@@ -68,21 +68,21 @@ function App() {
           </div>
           <div className="plant-detail bg-yellow-400 grid grid-flow-row grid-cols-3">
             <div className="general p-7 m-2 bg-cyan-200">
-              <h2 className="p-2 text-xl">General Info</h2>
+              <h2 className="p-2 text-xl">🎓General Info</h2>
               <hr/>
               <div className="general-content text-lg">
                 This plant needs XX liters amount of water
               </div>
             </div>
             <div className="general p-7 m-2 bg-green-200">
-              <h2 className="p-2 text-xl">Planting Info</h2>
+              <h2 className="p-2 text-xl">🌱Planting Info</h2>
               <hr/>
               <div className="planting-content text-lg">
                 To plant dig a X in hole
               </div>
             </div>
             <div className="general p-7 m-2 bg-red-200">
-              <h2 className="p-2 text-xl">Pest Info</h2>
+              <h2 className="p-2 text-xl">🐛Pest Info</h2>
               <hr/>
               <div className="pest-content text-lg">
                 Be aware of rodents
