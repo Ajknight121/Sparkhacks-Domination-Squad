@@ -16,20 +16,21 @@ let southWeather = [false, true, true, true, false, true, false];
 let middleWeather = [true, false, false, false, true, false, true];
 let northWeather = [false, false, false, true, false, false, false];
 let curWeather = middleWeather;
+
 let currzone = CentralIllinoisplants
 
 function chooseZone(loc_choice) {
   if (loc_choice == 0){
     currzone = NorthernIllinoisplants;
-    curWeather = json.parse(weatherNorthBase);
+    curWeather = northWeather
   }
   else if (loc_choice == 1){
     currzone = CentralIllinoisplants;
-    curWeather = json.parse(weatherMiddleBase);
+    curWeather = middleWeather
     }
   else if (loc_choice == 2){
     currzone = SouthernIllinoisplants;
-    curWeather = json.parse(weatherSouthBase);
+    curWeather = southWeather
     }
 }
 
