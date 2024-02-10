@@ -7,23 +7,21 @@ import WeatherDay from "./components/weatherDay";
 import "./App.css";
 import PlantOption from "./components/PlantOption";
 import SpaceIntroduction from "./components/SpaceIntro";
-const plants = [
-  {
-    plantName: "pumpkin",
-    info: ["takes up 3ft", "requires 1gal of water per day"],
-    pests: ["caterpillers", "Rodents"],
-  },
-  {
-    plantName: "Squash",
-    info: ["SQUASHING", "requires 8888gal of water per day"],
-    pests: ["Rodents"],
-  },
-  {
-    plantName: "Bell Pepper",
-    info: ["takes up 3ft", "requires 1gal of water per day"],
-    pests: ["caterpillers", "Rodents"],
-  },
-];
+import {NorthernIllinoisplants , CentralIllinoisplants, SouthernIllinoisplants } from "./plantData.js";
+
+let currzone = null
+
+function chooseZone(loc_choice) {
+  if (loc_choice == 0){
+    currzone = NorthernIllinoisplants;
+  }
+  else if (loc_choice == 1){
+    currzone = CentralIllinoisplants;
+    }
+  else if (loc_choice == 2){
+    currzone = SouthernIllinoisplants;
+    }
+}
 
 function App() {
   // const [rain, setRain] = useState(true);
@@ -90,7 +88,7 @@ function App() {
               </h2>
               <div className="p-5">
                 <div className="plants flex flex-row gap-3 w-fit pr-20 bg-yellow-400 p-5">
-                  {plants.map((plant, index) => (
+                  {currzone.map((plant, index) => (
                     <PlantOption
                       key={index}
                       plantName={plant.plantName}
@@ -104,7 +102,7 @@ function App() {
                     <h2 className="p-2 text-xl">🎓General Info</h2>
                     <hr />
                     <div className="general-content text-lg">
-                      {plants[selectedOption].info.map((text, index) => (
+                      {currzone[selectedOption].info.map((text, index) => (
                         <li key={index}>{text}</li>
                       ))}
                       This plant needs XX liters amount of water
