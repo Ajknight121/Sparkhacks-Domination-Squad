@@ -12,3 +12,11 @@ Heavily inspired by John Deere's *Operations Center*.
 ## [Future Plans](#plans)
 
 # Instructions {#howto}
+How to use a website lol
+
+
+# Inspiration {#inspire}
+we love code...
+
+# Future Plans {#plans}
+We want to write more...
