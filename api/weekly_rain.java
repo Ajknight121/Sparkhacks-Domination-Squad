@@ -5,16 +5,16 @@ import java.net.URL;
 
 
 public class weekly_rain {
-    public static void main(String[] args) {
+    public static void main(String[] args, String yesterday_time, String today_time, double lattitude, double longitude,) {
         try {
             private String rain_url = (
                 "https://api.meteomatics.com/" +
                 yesterday_time +
                 today_time +
                 "/precip_24h:mm/" +
-                lattitude +
+                Double.toString(lattitude) +
                 "," +
-                longitude +
+                Double.toString(longitude) +
                 "/json?api_key=" +
                 Rain_key.
                 )
