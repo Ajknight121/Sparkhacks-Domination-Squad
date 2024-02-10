@@ -1,38 +1,36 @@
-import java.net.http.HttpRequest;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
-public class RestApiTutorial{
-    public static void main(String[] args) throws Exception {
-        
-        Transcript transcript = new Transcript();
-        transcript.setAudio_url(null);
-        Gson gson = new Gson();
-        String jsonRequest = gson.toJson(transcript);
+public class geo_code.java{
+    public static void main(String[] args, String yesterday_time, String today_time, double lattitude, double longitude,) {
+        try {
+            private String rain_url = (
+                "https://api.meteomatics.com/" +
+                yesterday_time +
+                today_time +
+                "/precip_24h:mm/" +
+                Double.toString(lattitude) +
+                "," +
+                Double.toString(longitude) +
+                "/json?api_key=" +
+                Rain_key.
+                )
 
-        HttpRequest postRequest = HttpRequest.newBuilder()
-        .uri(new URI("url"))
-        .header("authorization", Constants.api_key)
-        .POST(BodyPublishers.ofString(
-            jsonrequest//might not be needed json
-            ))
-        .build();//post request
+            URL url = new URL(rain_url)
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+            conn.setRequestProperty("Accept", "application/json");
+            if (conn.getResponseCode() != 200) {
+                throw new RuntimeException("Failed : HTTP Error code : "
+                        + conn.getResponseCode());
+            }
+            
+            conn.disconnect();
 
-        HttpClient httpClient = HttpClient.newHttpClient();
-        
-        HttpResponse<string> postResponse = httpClient.send(postRequest, BodyHandlers.ofString())
-    
-        postResponse.body();
-
-        transcript = gson.fromJson(postResponse.body(), Transcript.class);
-        transcript.getID()
-
-        HttpRequest getRequest = HttpRequest.newBuilder()
-        .uri(new URI("url" + .getID))
-        .header("authorization", Constants.api_key)
-        .Get(BodyPublishers.ofString(
-            jsonrequest//might not be needed json
-            ))
-        .build();//get request
+        } catch (Exception e) {
+            System.out.println("Exception in NetClientGet:- " + e);
+        }
     }
-    //have to add in the gson dependencies 14:00 https://www.youtube.com/watch?v=9oq7Y8n1t00&ab_channel=CodingwithJohn
-    // have to look at websites for specific documentation how to hide api key
 }
