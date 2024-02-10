@@ -1,7 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .background-img {
   width: 100%;
   height: 100%;
+}
+
+.weather-day {
+  background-color: cadetblue;
+  padding: 10px;
+  border-style: solid;
+  margin-left: -1px;
 }
 
 /* #root {
