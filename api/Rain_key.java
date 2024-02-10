@@ -7,7 +7,9 @@ import java.util.Base64;
 
 
 public class Rain_key {
-    private static void main(String[] args) throws Exception {
+    private String token = "";
+
+    private void main(String[] args) throws Exception {
         String username = "uic_stuckey_sam";
         String password = "Slx0Ra7jR1";
         String auth = username + ":" + password;
@@ -30,8 +32,12 @@ public class Rain_key {
         connection.disconnect();
 
         // Assuming the response is JSON and contains an access_token field
-        String token = extractTokenFromJson(content.toString());
+        token = extractTokenFromJson(content.toString());
         System.out.println("Token: " + token);
+    }
+
+    public String getToken(){
+        return token;
     }
 
     public static String extractTokenFromJson(String jsonString) {
