@@ -7,15 +7,9 @@ public class geo_code.java{
     public static void main(String[] args, String yesterday_time, String today_time, double lattitude, double longitude,) {
         try {
             private String rain_url = (
-                "https://api.meteomatics.com/" +
-                yesterday_time +
-                today_time +
-                "/precip_24h:mm/" +
-                Double.toString(lattitude) +
-                "," +
-                Double.toString(longitude) +
-                "/json?api_key=" +
-                Rain_key.
+                "https://maps.googleapis.com/maps/api/geocode/json?
+                address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=" 
+                +""
                 )
 
             URL url = new URL(rain_url)
