@@ -33,6 +33,8 @@ function chooseZone(loc_choice) {
     }
 }
 
+let user_name = "Adrian";
+
 function App() {
   // const [rain, setRain] = useState(true);
   // const [selected, setSelected] = useState(false);
@@ -65,7 +67,11 @@ function App() {
             <div className="text-white text-3xl absolute top-4 left-5">
               <h1>My garden dashboard</h1>
             </div>
+            <div className = "text-white text-3xl absolute top-4 right-5">
+              <h1>{user_name}</h1>
+              </div>
           </div>
+          
           <div className="weather bg-cyan-300 p-5">
             <h2 className="bg-[#d3fff4] text-2xl font-bold p-10">
               This week&apos;s watering forecast
