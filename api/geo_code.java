@@ -4,13 +4,15 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class geo_code.java{
-    public static void main(String[] args, String yesterday_time, String today_time, double lattitude, double longitude,) {
+    public static void main(String[] args, String yesterday_time, String today_time, double lattitude, double longitude, int zipCode) {
         try {
             private String rain_url = (
                 "https://maps.googleapis.com/maps/api/geocode/json?
-                address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=" 
-                +""
-                )
+                postal_code=" +
+                String.valueOf(zipCode) +
+                "CA&key=" 
+                +" "
+                );
 
             URL url = new URL(rain_url)
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
