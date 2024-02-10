@@ -70,7 +70,7 @@ function App() {
               <WeatherDay day="Friday" rain={false} />
             </div>
           </div>
-          <div className="my-plants bg-amber-500 h-2/3 relative">
+          <div className="my-plants h-fit bg-amber-500 h-2/3 relative">
             <img
               src={cornerVine}
               className="absolute bottom-0 left-[-27px] overflow-hidden pointer-events-none"
