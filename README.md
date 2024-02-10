@@ -1,4 +1,4 @@
-Illinois Urban Farming Operations Center
+# My First Garden
 ---
 By: Adrian Knight, Zachary "Zacc" Robbins, Dmytro "Dima" Medvedkov, Sam Stuckey, Michael Khan
 
@@ -16,7 +16,9 @@ How to use a website lol
 
 
 # Inspiration {#inspire}
-we love code...
+The John Deere track at SparkHacks tasked us with, "proposing a technological solution aimed at a sustainable innovation and enviromentally friendly practices."
+
+Both the prompt and the sponsor inspired us to develop a tool which would encourage 
 
 # Future Plans {#plans}
 We want to write more...
