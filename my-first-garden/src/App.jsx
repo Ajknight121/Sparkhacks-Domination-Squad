@@ -61,7 +61,7 @@ function App() {
               This week&apos;s watering forecast
             </h2>
             <div className="grid grid-flow-row grid-cols-7">
-              <WeatherDay day="Saturday" rain={false} />
+              <WeatherDay day="Saturday" rain={regionWeather.list[0].weather.main == "deeznut" ? true : false} />
               <WeatherDay day="Sunday" rain={true} />
               <WeatherDay day="Monday" rain={true} />
               <WeatherDay day="Tuesday" rain={false} />
