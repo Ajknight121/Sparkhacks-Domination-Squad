@@ -14,7 +14,7 @@ export const NorthernIllinoisplants = [
         plantName: "Turnip",
         size:[2],
         sun:[0],
-        info: ["Grows in Zones 2-9, for zone 5 plant between May 15 and Aug. 5 for a fall harvest",
+        info: ["Grows in Zones 2-9, for zone 5 plant between May 15 and August 5 for a fall harvest",
         "Plant 2 inches apart",
         "Root maggots are the most prevalent problem, use diatomaceous earth around the root to dehydrate and kill them"],
     },
@@ -30,7 +30,7 @@ export const NorthernIllinoisplants = [
         plantName: "Winter Squash",
         size:[72],
         sun:[1],
-        info: ["rows in Zones 3-9, for zone 5 plant between June 5th and 15th",
+        info: ["Grows in Zones 3-9, for zone 5 plant between June 5th and 15th",
         "Plant 4 seeds per hill and thin to the 2 strongest seedlings", 
         "The biggest problem is cucumber beetles, they can be deterred with neem oil extract, a natural pesticide against them."],
     }
@@ -41,33 +41,33 @@ export const NorthernIllinoisplants = [
         plantName: "Mustard",
         size:[4],
         sun:[1],
-        info:["Grows in Zones 2-11, for zone 6 plant between April 1 to 30 and/or July 1 to August 31.", 
-        "Soak befor planting.", 
-        "Regular weeding required."]
+        info:["Grows in Zones 2-11, for zone 6 plant between April 1 to 30 and/or July 1 to August 31", 
+        "Plant 4 inches apart. Fun fact: the thinnings can be eaten whole!", 
+        "Aphids can create large colonies under the leaves. Ladybugs can be bought in bulk for cheap to control their populations"]
     },
     {
         plantName: "Carrots",
         size:[0.25],
         sun:[1],
         info:["Grows in Zones 4-8, for zone 6 plant from April 10 to July 15 for a fall harvest.",
-        "Precise water maintenance required.",
-        "Be aware of rodens."]
+        "Plant 0.25 inches apart.",
+        "The biggest problem with carrots is the precise water maintenance required. A moisture monitor or using the above watering chart may help mitigate this."]
     },
     {
         plantName: "Radish",
         size:[1],
         sun:[1],
         info:["Grows in Zones 2-11, for zone 6 plant between April 5 and June 1, and/or Aug. 1 to 30",
-        "Works well in between slow-maturing vegetables.",
-        "Root maggots are the most prevalent problem."]
+        "Plant 0.25 inches apart, thin to 1 inch apart. Works well in between slow-maturing vegetables or as a placeholder for vegetables that can't stand the cold",
+        "Root maggots are the most prevalent problem, use diatomaceous earth around the root to dehydrate and kill them"]
     },
     {
         plantName: "Pumpkin",
         size:[72],
         sun:[1],
         info:["Grows in Zones 3-9, for zone 6 plant between May 20 and June 10",
-        "Works well in between slow-maturing vegetables.",
-        "One of the biggest problems for pumpkins is powdery mildew."]
+        "Plant 72 inches apart, between hills. Plant 5 seeds per hill; thin to 2 or 3 best seedlings",
+        "One of the biggest problems for pumpkins is powdery mildew, which can be alleviated by using 1 tablespoon baking soda and 0.5 teaspoon liquid soap in 1 gallon of water. This mixture can be sprayed on leaves as both a counter and preventative measure."]
     }
   ]
 
@@ -77,7 +77,7 @@ export const SouthernIllinoisplants = [
         size:[3],
         sun:[0],
         info:["Grows in Zones 2-9, for zone 7 plant from April 15 to July 7 as a fall crop",
-        "Plant 3 inches apart”",
+        "Plant 3 inches apart",
         "Low soil fertility is the only significant problem for parsnips due to a lack of insects and diseases that target them. This can be avoided by side-fertilizing in July."]
     },
     {

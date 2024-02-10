@@ -16,7 +16,7 @@ let southWeather = [false, true, false, true, false, true, false];
 let middleWeather = [true, false, true, false, true, false, true];
 let northWeather = [false, false, false, false, false, false, false];
 let curWeather = northWeather;
-let currzone = NorthernIllinoisplants
+let currzone = CentralIllinoisplants
 
 function chooseZone(loc_choice) {
   if (loc_choice == 0){
@@ -109,7 +109,7 @@ function App() {
                 </div>
                 <div className="plant-detail p-8 bg-yellow-400 grid grid-flow-row grid-cols-3">
                   <div className="general p-7 m-2 bg-cyan-200">
-                    <h2 className="p-2 text-xl">🎓General Info</h2>
+                    <h2 className="p-2 text-xl">🎓Time and Zone Info</h2>
                     <hr />
                     <div className="general-content text-lg">
                     {currzone[selectedOption].info[0]}
@@ -123,7 +123,7 @@ function App() {
                     </div>
                   </div>
                   <div className="general p-7 m-2 bg-red-200">
-                    <h2 className="p-2 text-xl">🐛Pest Info</h2>
+                    <h2 className="p-2 text-xl">🐛Problem/Pest Info</h2>
                     <hr />
                     <div className="pest-content text-lg">
                       {currzone[selectedOption].info[2]}
