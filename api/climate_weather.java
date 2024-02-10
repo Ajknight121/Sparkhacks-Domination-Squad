@@ -4,7 +4,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 
-public class climate {
+public class climate_weather {
     public static void main(String[] args) {
         try {
             private String climate_url = (
@@ -24,7 +24,7 @@ public class climate {
                 throw new RuntimeException("Failed : HTTP Error code : "
                         + conn.getResponseCode());
             }
-            
+            //add something here that sends info about the climate zone back to the user
             conn.disconnect();
 
         } catch (Exception e) {

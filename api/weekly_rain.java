@@ -4,7 +4,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 
-public class rain {
+public class weekly_rain {
     public static void main(String[] args) {
         try {
             private String rain_url = (
@@ -16,7 +16,7 @@ public class rain {
                 "," +
                 longitude +
                 "/json?api_key=" +
-                rain_api_key()
+                Rain_key.
                 )
 
             URL url = new URL(rain_url)
