@@ -10,20 +10,20 @@ import PlantOption from "./components/PlantOption";
 const plants = [
   {
     plantName: "pumpkin",
-    info:["takes up 3ft", "requires 1gal of water per day"],
+    info: ["takes up 3ft", "requires 1gal of water per day"],
     pests: ["caterpillers", "Rodents"],
   },
   {
     plantName: "Squash",
-    info:["takes up 3ft", "requires 1gal of water per day"],
-    pests: ["caterpillers", "Rodents"],
+    info: ["SQUASHING", "requires 8888gal of water per day"],
+    pests: ["Rodents"],
   },
   {
     plantName: "Bell Pepper",
-    info:["takes up 3ft", "requires 1gal of water per day"],
+    info: ["takes up 3ft", "requires 1gal of water per day"],
     pests: ["caterpillers", "Rodents"],
   },
-]
+];
 
 function App() {
   const [rain, setRain] = useState(true);
@@ -53,7 +53,7 @@ function App() {
         </div>
         <div className="weather bg-cyan-300 p-5">
           <h2 className="bg-[#d3fff4] text-2xl font-bold p-10">
-            This Week's Weather
+          This week&apos;s watering forecast
           </h2>
           <div className="grid grid-flow-row grid-cols-7">
             <WeatherDay day="Saturday" rain={false} />
@@ -81,38 +81,42 @@ function App() {
             <h2 className="text-2xl font-bold p-10 bg-green-500">
               Your plants
             </h2>
-            <div className="plants flex flex-row gap-3 overflow-x-scroll p-5">
-              {plants.map((plant, index) => (
-                <PlantOption
-                  key={index}
-                  plantName={plant.plantName}
-                  selected={selectedOption === index}
-                  onClick={() => handleSelect(index)}
-                />
-              ))}
-            </div>
-            <div className="plant-detail bg-yellow-400 grid grid-flow-row grid-cols-3">
-              <div className="general p-7 m-2 bg-cyan-200">
-                <h2 className="p-2 text-xl">🎓General Info</h2>
-                <hr />
-                <div className="general-content text-lg">
-                  {plants[selectedOption].info.map((text, index) => (
-                    <li key={index}>{text}</li>
-                  ))}
-                  This plant needs XX liters amount of water
-                </div>
+            <div className="p-5">
+              <div className="plants flex flex-row gap-3 w-fit pr-20 bg-yellow-400 p-5">
+                {plants.map((plant, index) => (
+                  <PlantOption
+                    key={index}
+                    plantName={plant.plantName}
+                    selected={selectedOption === index}
+                    onClick={() => handleSelect(index)}
+                  />
+                ))}
               </div>
-              <div className="general p-7 m-2 bg-green-200">
-                <h2 className="p-2 text-xl">🌱Planting Info</h2>
-                <hr />
-                <div className="planting-content text-lg">
-                  To plant dig a X in hole
+              <div className="plant-detail p-8 bg-yellow-400 grid grid-flow-row grid-cols-3">
+                <div className="general p-7 m-2 bg-cyan-200">
+                  <h2 className="p-2 text-xl">🎓General Info</h2>
+                  <hr />
+                  <div className="general-content text-lg">
+                    {plants[selectedOption].info.map((text, index) => (
+                      <li key={index}>{text}</li>
+                    ))}
+                    This plant needs XX liters amount of water
+                  </div>
                 </div>
-              </div>
-              <div className="general p-7 m-2 bg-red-200">
-                <h2 className="p-2 text-xl">🐛Pest Info</h2>
-                <hr />
-                <div className="pest-content text-lg">Be aware of rodents</div>
+                <div className="general p-7 m-2 bg-green-200">
+                  <h2 className="p-2 text-xl">🌱Planting Info</h2>
+                  <hr />
+                  <div className="planting-content text-lg">
+                    To plant dig a X in hole
+                  </div>
+                </div>
+                <div className="general p-7 m-2 bg-red-200">
+                  <h2 className="p-2 text-xl">🐛Pest Info</h2>
+                  <hr />
+                  <div className="pest-content text-lg">
+                    Be aware of rodents
+                  </div>
+                </div>
               </div>
             </div>
           </div>
