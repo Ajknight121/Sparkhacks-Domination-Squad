@@ -22,7 +22,7 @@ export default function SpaceIntroduction({
   useEffect(() => {
     if (step === 0) {
       setHead("Welcome,");
-      setSub("I'm Beka, your garden helper");
+      setSub("I'm BeKa, your garden helper");
     } else if (step === 1) {
       setHead("Alright, let's get started");
       setSub("What is your name?");
