@@ -24,7 +24,7 @@ public class geo_code{
             conn.disconnect();
 
         } catch (Exception e) {
-            System.out.println("Exception in NetClientGet:- " + e);
+            System.out.println("(geo_code.java) Exception in NetClientGet:- " + e);
         }
     }
 }

@@ -31,7 +31,7 @@ public class weekly_rain {
             conn.disconnect();
 
         } catch (Exception e) {
-            System.out.println("Exception in NetClientGet:- " + e);
+            System.out.println("(weekly_rain.java) Exception in NetClientGet:- " + e);
         }
     }
 }

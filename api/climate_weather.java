@@ -28,7 +28,7 @@ public class climate_weather {
             conn.disconnect();
 
         } catch (Exception e) {
-            System.out.println("Exception in NetClientGet:- " + e);
+            System.out.println("(climate_weather.java) Exception in NetClientGet:- " + e);
         }
     }
 }
