@@ -3,12 +3,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class geo_code.java{
+public class geo_code{
     public static void main(String[] args, String yesterday_time, String today_time, double lattitude, double longitude, int zipCode) {
         try {
-            private String rain_url = (
-                "https://maps.googleapis.com/maps/api/geocode/json?
-                postal_code=" +
+            String rain_url = (
+                "https://maps.googleapis.com/maps/api/geocode/json?postal_code=" +
                 String.valueOf(zipCode) +
                 "CA&key=" 
                 +" "
