@@ -29,6 +29,6 @@ export const NorthernIllinoisplants = [
         dates: ["6/5","6/15"],
         size:[1],
         sun:[0],
-        info: ["The biggest problem is cucumber beetles, they can be deterred with neem oil extract, a natural pesticide against them."],
+        info: ["Plant 4 seeds per hill and thin to the 2 strongest seedlings", "The biggest problem is cucumber beetles, they can be deterred with neem oil extract, a natural pesticide against them."],
     }
   ]
