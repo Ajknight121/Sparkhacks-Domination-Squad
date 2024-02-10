@@ -17,8 +17,6 @@ let middleWeather = [true, false, false, false, true, false, true];
 let northWeather = [false, false, false, true, false, false, false];
 
 
-let user_name = "Adrian";
-
 function App() {
   // const [rain, setRain] = useState(true);
   // const [selected, setSelected] = useState(false);
@@ -71,7 +69,7 @@ function App() {
               <h1>My garden dashboard</h1>
             </div>
             <div className = "text-white text-3xl absolute top-4 right-5">
-              <h1>{user_name}</h1>
+              <h1>{username}</h1>
               </div>
           </div>
           

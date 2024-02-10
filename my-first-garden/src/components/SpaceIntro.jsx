@@ -49,6 +49,7 @@ export default function SpaceIntroduction({
       <div className="bg-green-800 w-1/2 h-1/2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 ">
         <h1 className="text-white text-7xl font-bold pl-8 py-8">{head}</h1>
         <div className="text-white text-5xl font-semibold pl-8">{sub}</div>
+        <div className="p-20">
         {step == 1 && (
           <input
             type="text"
@@ -105,6 +106,8 @@ export default function SpaceIntroduction({
               placeholder="Enter length in feet"
               // Add onChange handler to update state if necessary
             />
+            <br/>
+            <div className="p-2"></div>
             <label htmlFor="width">Width (ft):</label>
             <input
               id="width"
@@ -147,7 +150,8 @@ export default function SpaceIntroduction({
             </label>
           </div>
         )}
-
+        </div>
+        
         {step != 0 && (
         <button
           onClick={prev}
