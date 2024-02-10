@@ -21,6 +21,22 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+dependencies {
+    annotationProcessor 'io.soabase.record-builder:record-builder-processor:$version-goes-here'
+    compileOnly 'io.soabase.record-builder:record-builder-core:$version-goes-here'
+}
+
+dependencies {
+  implementation 'com.google.code.gson:gson:2.10.1'
+}
+
+<dependency>
+    <groupId>io.github.deansg</groupId>
+    <artifactId>jeocodio</artifactId>
+    <version>0.2.0</version>
+</dependency>
+
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
