@@ -19,23 +19,7 @@ function chooseZone (loc_choice) {
     const currzone = SouthernIllinoisplants;
     }
 }
-const plants = [
-  {
-    plantName: "pumpkin",
-    info: ["takes up 3ft", "requires 1gal of water per day"],
-    pests: ["caterpillers", "Rodents"],
-  },
-  {
-    plantName: "Squash",
-    info: ["SQUASHING", "requires 8888gal of water per day"],
-    pests: ["Rodents"],
-  },
-  {
-    plantName: "Bell Pepper",
-    info: ["takes up 3ft", "requires 1gal of water per day"],
-    pests: ["caterpillers", "Rodents"],
-  },
-];
+
 
 function App() {
   const [rain, setRain] = useState(true);
