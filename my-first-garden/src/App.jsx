@@ -9,7 +9,7 @@ import PlantOption from "./components/PlantOption";
 import SpaceIntroduction from "./components/SpaceIntro";
 import {NorthernIllinoisplants , CentralIllinoisplants, SouthernIllinoisplants } from "./plantData.js";
 
-let currzone = null
+let currzone = NorthernIllinoisplants
 
 function chooseZone(loc_choice) {
   if (loc_choice == 0){
