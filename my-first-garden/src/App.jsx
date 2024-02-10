@@ -12,10 +12,10 @@ import {NorthernIllinoisplants , CentralIllinoisplants, SouthernIllinoisplants }
 //import weatherMiddleBase from "./components/testWeatherMiddle.JSON";
 //import weatherNorthBase from "./components/testWeatherNorth.JSON";
 
-let southWeather = [false, true, false, true, false, true, false];
-let middleWeather = [true, false, true, false, true, false, true];
-let northWeather = [false, false, false, false, false, false, false];
-let curWeather = northWeather;
+let southWeather = [false, true, true, true, false, true, false];
+let middleWeather = [true, false, false, false, true, false, true];
+let northWeather = [false, false, false, true, false, false, false];
+let curWeather = middleWeather;
 let currzone = CentralIllinoisplants
 
 function chooseZone(loc_choice) {
