@@ -36,34 +36,26 @@ export const NorthernIllinoisplants = [
 export const CentralIllinoisplants = [
 {
     plantName: "Mustard",
-    zones: ["2-11"],
-    dates: ["04/01","09/31"],
     size:[4],
-    info:["Soak befor planting.", "Regular weeding required."],
+    info:["Grows in Zones 2-11, for zone 6 plant between April 1 to 30 and/or July 1 to August 31.", "Soak befor planting.", "Regular weeding required."],
     sun:[1]
 },
 {
     plantName: "Carrots",
-    zones: ["4-8"],
-    dates: ["04/10","07/15"],
     size:[0.25],
-    info:["Precise water maintenance required.", "Be aware of rodens."],
+    info:["Grows in Zones 4-8, for zone 6 plant from April 10 to July 15 for a fall harvest.","Precise water maintenance required.", "Be aware of rodens."],
     sun:[1]
 },
 {
     plantName: "Radish",
-    zones: ["2-11"],
-    dates: ["04/5","07/1"],
     size:[1],
-    info:["Works well in between slow-maturing vegetables.", "Root maggots are the most prevalent problem."],
+    info:["Grows in Zones 2-11, for zone 6 plant between April 5 and June 1, and/or Aug. 1 to 30", "Works well in between slow-maturing vegetables.", "Root maggots are the most prevalent problem."],
     sun:[1]
 },
 {
     plantName: "Pumpkin",
-    zones: ["3-9"],
-    dates: ["03/20","06/10"],
     size:[72],
-    info:["Works well in between slow-maturing vegetables.", "One of the biggest problems for pumpkins is powdery mildew."],
+    info:["Grows in Zones 3-9, for zone 6 plant between May 20 and June 10", "Works well in between slow-maturing vegetables.", "One of the biggest problems for pumpkins is powdery mildew."],
     sun:[1]
 }
 
