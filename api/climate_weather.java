@@ -1,8 +1,9 @@
 import java.io.BufferedReader;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.util.Map;
 import java.net.URL;
-
 
 public class climate_weather {
     private String lattidude, longitude;  
@@ -60,6 +61,10 @@ public class climate_weather {
                             + conn.getResponseCode());
                 }
                 //add something here that sends info about the climate zone back to the user
+                InputStream input = (InputStream) conn.getInputStream();
+
+                Map<String, String> content;
+                
                 String result = "Something something";
                 conn.disconnect();
                 return result;
