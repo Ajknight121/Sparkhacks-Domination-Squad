@@ -6,6 +6,19 @@ import cornerVine from "./images/vines-corner.png";
 import WeatherDay from "./components/weatherDay";
 import "./App.css";
 import PlantOption from "./components/PlantOption";
+import {NorthernIllinoisplants , CentralIllinoisplants, SouthernIllinoisplants } from "./plantData.js";
+
+function chooseZone (loc_choice) {
+  if (loc_choice == 0){
+  const currzone = NorthernIllinoisplants;
+  }
+  else if (loc_choice == 1){
+    const currzone = CentralIllinoisplants;
+    }
+  else if (loc_choice == 2){
+    const currzone = SouthernIllinoisplants;
+    }
+}
 import SpaceIntroduction from "./components/SpaceIntro";
 const plants = [
   {
@@ -84,52 +97,51 @@ function App() {
               width={"25%"}
             />
 
-            <div className="weather p-5">
-              <h2 className="text-2xl font-bold p-10 bg-green-500">
-                Your plants
-              </h2>
-              <div className="p-5">
-                <div className="plants flex flex-row gap-3 w-fit pr-20 bg-yellow-400 p-5">
-                  {plants.map((plant, index) => (
-                    <PlantOption
-                      key={index}
-                      plantName={plant.plantName}
-                      selected={selectedOption === index}
-                      onClick={() => handleSelect(index)}
-                    />
-                  ))}
+          <div className="weather p-5">
+            <h2 className="text-2xl font-bold p-10 bg-green-500">
+              Your plants
+            </h2>
+            <div className="p-5">
+              <div className="plants flex flex-row gap-3 w-fit pr-20 bg-yellow-400 p-5">
+                {currzone.map((plant, index) => (
+                  <PlantOption
+                    key={index}
+                    plantName={plant.plantName}
+                    selected={selectedOption === index}
+                    onClick={() => handleSelect(index)}
+                  />
+                ))}
+              </div>
+              <div className="plant-detail p-8 bg-yellow-400 grid grid-flow-row grid-cols-3">
+                <div className="general p-7 m-2 bg-cyan-200">
+                  <h2 className="p-2 text-xl">🎓General Info</h2>
+                  <hr />
+                  <div className="general-content text-lg">
+                    {currzone[selectedOption].info.map((text, index) => (
+                      <li key={index}>{text}</li>
+                    ))}
+                    This plant needs XX liters amount of water
+                  </div>
                 </div>
-                <div className="plant-detail p-8 bg-yellow-400 grid grid-flow-row grid-cols-3">
-                  <div className="general p-7 m-2 bg-cyan-200">
-                    <h2 className="p-2 text-xl">🎓General Info</h2>
-                    <hr />
-                    <div className="general-content text-lg">
-                      {plants[selectedOption].info.map((text, index) => (
-                        <li key={index}>{text}</li>
-                      ))}
-                      This plant needs XX liters amount of water
-                    </div>
+                <div className="general p-7 m-2 bg-green-200">
+                  <h2 className="p-2 text-xl">🌱Planting Info</h2>
+                  <hr />
+                  <div className="planting-content text-lg">
+                    To plant dig a X in hole
                   </div>
-                  <div className="general p-7 m-2 bg-green-200">
-                    <h2 className="p-2 text-xl">🌱Planting Info</h2>
-                    <hr />
-                    <div className="planting-content text-lg">
-                      To plant dig a X in hole
-                    </div>
-                  </div>
-                  <div className="general p-7 m-2 bg-red-200">
-                    <h2 className="p-2 text-xl">🐛Pest Info</h2>
-                    <hr />
-                    <div className="pest-content text-lg">
-                      Be aware of rodents
-                    </div>
+                </div>
+                <div className="general p-7 m-2 bg-red-200">
+                  <h2 className="p-2 text-xl">🐛Pest Info</h2>
+                  <hr />
+                  <div className="pest-content text-lg">
+                    Be aware of rodents
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 }
