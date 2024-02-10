@@ -1,0 +1,9 @@
+{"Crops": {
+    "Example": {
+        "name": "Really Nice CArrot",
+        "sun req": 10.0,
+        "water req": 10.0,
+        "land req": 12,
+        "soil pH": 0.4
+    }
+}}    
