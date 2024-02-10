@@ -8,7 +8,16 @@ import "./App.css";
 import PlantOption from "./components/PlantOption";
 import {NorthernIllinoisplants , CentralIllinoisplants, SouthernIllinoisplants } from "./plantData.js";
 
-
+if (loc_choice == 0){
+const currzone = NorthernIllinoisplants;
+}
+else if (loc_choice == 1){
+  const currzone = CentralIllinoisplants;
+  }
+else if (loc_choice == 2){
+  const currzone = SouthernIllinoisplants;
+  }
+  
 const plants = [
   {
     plantName: "pumpkin",
@@ -85,7 +94,7 @@ function App() {
             </h2>
             <div className="p-5">
               <div className="plants flex flex-row gap-3 w-fit pr-20 bg-yellow-400 p-5">
-                {plants.map((plant, index) => (
+                {.map((plant, index) => (
                   <PlantOption
                     key={index}
                     plantName={plant.plantName}
