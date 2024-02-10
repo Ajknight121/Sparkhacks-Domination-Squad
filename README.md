@@ -12,8 +12,7 @@ Heavily inspired by John Deere's *Operations Center*.
 ## [Future Plans](#plans)
 
 # Instructions {#howto}
-How to use a website lol
-
+The site can be accesed here: https://main--myfirstsparkhacksgarden.netlify.app/
 
 # Inspiration {#inspire}
 The John Deere track at SparkHacks tasked us with, "proposing a technological solution aimed at a sustainable innovation and enviromentally friendly practices."
@@ -21,4 +20,5 @@ The John Deere track at SparkHacks tasked us with, "proposing a technological so
 Both the prompt and the sponsor inspired us to develop a tool which would encourage 
 
 # Future Plans {#plans}
-We want to write more...
+We plan to expand the app with usage of 3rd-party APIs on the back-end and expansion of UI/UX.
+- We plan to fully implement APIs to allow for checking the weather given a ZIP code and also add a sun exposure widget. In addition, we also hope to add support for inputting anywhere in the United Ststes of America.s
