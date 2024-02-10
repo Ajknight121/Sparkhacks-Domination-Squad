@@ -15,24 +15,7 @@ import {NorthernIllinoisplants , CentralIllinoisplants, SouthernIllinoisplants }
 let southWeather = [false, true, true, true, false, true, false];
 let middleWeather = [true, false, false, false, true, false, true];
 let northWeather = [false, false, false, true, false, false, false];
-let curWeather = middleWeather;
 
-let currzone = CentralIllinoisplants
-
-function chooseZone(loc_choice) {
-  if (loc_choice == 0){
-    currzone = NorthernIllinoisplants;
-    curWeather = northWeather
-  }
-  else if (loc_choice == 1){
-    currzone = CentralIllinoisplants;
-    curWeather = middleWeather
-    }
-  else if (loc_choice == 2){
-    currzone = SouthernIllinoisplants;
-    curWeather = southWeather
-    }
-}
 
 let user_name = "Adrian";
 
@@ -43,18 +26,23 @@ function App() {
   const [username, setUsername] = useState("user")
   const [step, setStep] = useState(0)
   const [currzone, setZone] = useState(NorthernIllinoisplants)
+  const [curWeather, setWeather] = useState(northWeather)
   
   function chooseZone(loc_choice) {
     if (loc_choice == 0){
       setZone(NorthernIllinoisplants);
+      setWeather(northWeather)
     }
     else if (loc_choice == 1){
       setZone(CentralIllinoisplants);
+      setWeather(middleWeather)
       }
     else if (loc_choice == 2){
       setZone(SouthernIllinoisplants);
+      setWeather(southWeather)
       }
   }
+
   const nextStep = () => {
     setStep(prevStep => prevStep + 1);
   };
@@ -71,7 +59,7 @@ function App() {
   return (
     <>
       {step < 6 ? (
-        <SpaceIntroduction username={username} setUsername={setUsername} step={step} prev={prevStep} next={nextStep} currZone={currzone} setZone={setZone}/>
+        <SpaceIntroduction username={username} setUsername={setUsername} step={step} prev={prevStep} next={nextStep} currZone={currzone} setZone={chooseZone}/>
       ) : (
         <div className="dashboard w-full h-screen bg-amber-700">
           <div className="relative w-full h-20">
