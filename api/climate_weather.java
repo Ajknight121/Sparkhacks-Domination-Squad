@@ -7,16 +7,16 @@ import java.net.URL;
 public class climate {
     public static void main(String[] args) {
         try {
-            private String rain_url = (
+            private String climate_url = (
                 "http://climateapi.scottpinkelman.com/api/v1/location/" +
                 "[" + lattitude + "]" +
                 "/" +
-                "[" + longitude + "]" +
-                "/json?api_key=" +
-                rain_api_key()
+                "[" + longitude + "]"
+                //"/json?api_key=" dont think we need this either
+                //climate_key() we will see about this one
                 )
 
-            URL url = new URL(rain_url)
+            URL url = new URL(climate_url)
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Accept", "application/json");
