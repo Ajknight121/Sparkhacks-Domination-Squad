@@ -7,16 +7,28 @@ import WeatherDay from "./components/weatherDay";
 import "./App.css";
 import PlantOption from "./components/PlantOption";
 import {NorthernIllinoisplants , CentralIllinoisplants, SouthernIllinoisplants } from "./plantData.js";
+import testWeatherMiddleJSON from "./components/testWeatherMiddle.JSON";
+import testWeatherNorthJSON from "./components/testWeatherNorth.JSON";
+import testWeatherSouthJSON from "./components/testWeatherSouth.JSON";
+
+let testWeatherNorth = JSON.parse(testWeatherNorthJSON);
+let testWeatherSouth = JSON.parse(testWeatherSouthJSON);
+let testWeatherMiddle = JSON.parse(testWeatherMiddleJSON);
+var regionWeather;
+
 
 function chooseZone (loc_choice) {
   if (loc_choice == 0){
   const currzone = NorthernIllinoisplants;
+  regionWeather = testWeatherNorth;
   }
   else if (loc_choice == 1){
     const currzone = CentralIllinoisplants;
+    regionWeather = testWeatherMiddle;
     }
   else if (loc_choice == 2){
     const currzone = SouthernIllinoisplants;
+    regionWeather = testWeatherSouth;
     }
 }
 const plants = [
@@ -68,13 +80,13 @@ function App() {
           This week&apos;s watering forecast
           </h2>
           <div className="grid grid-flow-row grid-cols-7">
-            <WeatherDay day="Saturday" rain={false} />
-            <WeatherDay day="Sunday" rain={true} />
-            <WeatherDay day="Monday" rain={true} />
-            <WeatherDay day="Tuesday" rain={false} />
-            <WeatherDay day="Wednesday" rain={true} />
-            <WeatherDay day="Thursday" rain={false} />
-            <WeatherDay day="Friday" rain={false} />
+            <WeatherDay day="Today" rain={regionWeather.list[0].weather.main == "deeznut" ? true : false} />
+            <WeatherDay day="Tomorrow" rain={true} />
+            <WeatherDay day="2/12" rain={true} />
+            <WeatherDay day="2/13" rain={false} />
+            <WeatherDay day="2/14" rain={true} />
+            <WeatherDay day="2/15" rain={false} />
+            <WeatherDay day="2/16" rain={false} />
           </div>
         </div>
         <div className="my-plants bg-amber-500 h-2/3 relative">
